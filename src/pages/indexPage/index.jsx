@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React from 'react'
+// import PropTypes from 'prop-types'
 
 import CommsA from '@components/CommsA'
 
-import { getApi1 } from './api'
+// import { getApi1 } from './api'
 
 import './index.scss'
 
