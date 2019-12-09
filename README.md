@@ -1,4 +1,4 @@
-# React-SPA-template
+# React-SPA-Template
 
-React单页模板
-使用 webpack4 + babel7 + eslint
+React single page templace
+`webpack4` + `babel7` + `eslint` + `postcss`
