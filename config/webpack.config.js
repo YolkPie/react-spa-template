@@ -11,14 +11,14 @@ const srcDir = path.resolve(__dirname, '../src')
 const rootDir = path.resolve(__dirname, '../')
 
 module.exports = {
-  entry: path.resolve(srcDir, 'index.js'),
+  entry: path.resolve(srcDir, 'index'),
   output: {
     filename: '[name].[hash].js',
     path: distDir
   },
   resolve: {
     // 配置解析文件拓展名
-    extensions: ['*', '.js', '.jsx'],
+    extensions: ['*', '.js', '.jsx', '.ts', '.tsx'],
     // 配置别名
     alias: {
       '@': path.resolve(srcDir),
@@ -35,6 +35,13 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader'
+        }
+      },
+      {
+        test: /\.tsx?$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'ts-loader'
         }
       },
       // 字体加载
