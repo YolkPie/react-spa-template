@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run dev",
-    "dev": "webpack-dev-server --config config/webpack.config.dev.js --mode development --colors",
+    "start": "npm run serve",
+    "serve": "webpack-dev-server --config config/webpack.config.dev.js --mode development --colors",
     "build:dev": "rm -rf dist/* && webpack --config config/webpack.config.beta.js --mode development --colors --progress",
     "build:prod": "rm -rf dist/* && webpack --config config/webpack.config.prod.js --mode production --colors --progress",
     "lint": "eslint src"

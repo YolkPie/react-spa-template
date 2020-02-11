@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const WebpackBuildNotifierPlugin = require('webpack-build-notifier')
 
 // 打包后文件位置
-const distDir = path.resolve(__dirname, '../dist')
+const distDir = path.resolve(__dirname, '../deploy')
 // 源文件目录
 const srcDir = path.resolve(__dirname, '../src')
 // 根目录
