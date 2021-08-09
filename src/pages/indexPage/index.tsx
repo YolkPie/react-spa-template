@@ -1,10 +1,8 @@
-import React from 'react'
-// import PropTypes from 'prop-types'
-
+import React, { ReactElement } from 'react'
 import CommsA from '@components/CommsA'
-
 import './index.scss'
-const IndexPage = () => (
+
+const IndexPage: () => ReactElement<any, any> = () => (
   <div>
     Hello React! This is indexPage
     <CommsA />

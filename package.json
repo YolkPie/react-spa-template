@@ -9,12 +9,12 @@
     "build:dev": "rm -rf dist/* && webpack --config config/webpack.config.beta.js --mode development --colors --progress",
     "build:prod": "rm -rf dist/* && webpack --config config/webpack.config.prod.js --mode production --colors --progress",
     "build:testBuild": "rm -rf dist/* && webpack --config config/webpack.config.prod.js --mode production --colors --progress --testBuild",
-    "lint": "eslint src"
+    "lint": "eslint 'src/**/*.{ts,js,tsx,jsx}'"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@yolkpie/utils": "^1.0.5",
+    "@yolkpie/utils": "^1.0.6",
     "axios": "^0.19.0",
     "axios-retry": "^3.1.2",
     "clean-webpack-plugin": "^4.0.0-alpha.0",

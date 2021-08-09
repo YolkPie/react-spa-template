@@ -4,7 +4,8 @@ import * as ReactDOM from 'react-dom'
 import './styles/base.scss'
 import App from './App'
 
-// rem() // 不建议rem
+// rem(750) // 不建议rem
+
 ReactDOM.render(
   <div className="App">
     <App />
@@ -15,4 +16,3 @@ ReactDOM.render(
 if (module.hot) {
   module.hot.accept()
 }
-

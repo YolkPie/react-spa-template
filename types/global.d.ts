@@ -1,5 +1,3 @@
-declare module 'react' {
-  export interface HTMLAttributes<T> {
-    clstag?: string;
-  }
+declare interface AnyObj {
+  [key: string]: any
 }

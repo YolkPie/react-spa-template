@@ -23,7 +23,10 @@
       "@router/*": ["./src/router/*"]
     }
   },
-  "include": ["src"],
+  "include": [
+    "src",
+    "types/global.d.ts"
+  ],
   "exclude": [
     "node_modules",
     "dist",

@@ -38,7 +38,19 @@ module.exports = {
     'react/state-in-constructor': 0,
     'react/forbid-prop-types': 0,
     'react-hooks/rules-of-hooks': 'error', // 检查 Hook 的规则
-    'react-hooks/exhaustive-deps': 'warn' // 检查 effect 的依赖
+    'react-hooks/exhaustive-deps': 'warn', // 检查 effect 的依赖
+		"no-use-before-define": [0],
+		'react/jsx-filename-extension': [1, { 'extensions': ['.ts', '.tsx'] }],
+		'import/extensions': ['error', 'ignorePackages', {
+			"js": 'never',
+			"jsx": 'never',
+			"ts": 'never',
+			"tsx": 'never'
+		}],
+		'@typescript-eslint/no-var-requires': 0,
+		'@typescript-eslint/no-unused-vars': [0, { args: 'none' }], // 不限制定义的类型是否使用
+		'@typescript-eslint/no-empty-function': 0, // 不限制是空函数
+		'@typescript-eslint/no-explicit-any': 0 // 不限制设置any类型
   },
   settings: {
     'import/resolver': {
