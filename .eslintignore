@@ -4,3 +4,5 @@ node_modules/**
 build/**
 scripts/**
 config/**
+jest.config.ts
+/**/*.test.js
