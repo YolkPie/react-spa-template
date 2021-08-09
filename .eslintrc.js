@@ -8,12 +8,13 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'airbnb',
+    'plugin:@typescript-eslint/recommended'
   ],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
   },
-  parser: "babel-eslint",
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -41,6 +42,9 @@ module.exports = {
   },
   settings: {
     'import/resolver': {
+      'node': {
+        'extensions': ['.js', '.jsx', '.ts', '.tsx']
+      },
       webpack: {
         //此处config对应webpack.config.js的路径
         config: path.resolve(__dirname, 'config/webpack.config.js')

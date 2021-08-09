@@ -44,6 +44,7 @@ module.exports = WebPackMerge(baseConfig, {
     hotOnly: true, // 编译成功后刷新
     // open: true, // 是否自动打开浏览器
     disableHostCheck: true, // 解决 127.0.0.1 指向其他域名错误
+    historyApiFallback: true
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),

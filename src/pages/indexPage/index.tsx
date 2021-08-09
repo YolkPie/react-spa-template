@@ -3,10 +3,7 @@ import React from 'react'
 
 import CommsA from '@components/CommsA'
 
-// import { getApi1 } from './api'
-
 import './index.scss'
-
 const IndexPage = () => (
   <div>
     Hello React! This is indexPage

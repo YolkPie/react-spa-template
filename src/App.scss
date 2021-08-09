@@ -1,2 +1,33 @@
 @import '~@styles/base.scss';
 @import '~@styles/_var.scss';
+.page-loading {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #a4a4a4;
+}
+.page-loading i {
+  display: block;
+  margin-right: 5px;
+  width: 15px;
+  height: 15px;
+  background: url('../src/assets/img/loading.png') no-repeat center/contain;
+  animation: imgRotate 2s infinite linear;
+}
+@keyframes imgRotate {
+  0% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+  }
+}

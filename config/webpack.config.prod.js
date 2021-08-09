@@ -6,12 +6,14 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const CompressionWebpackPlugin = require('compression-webpack-plugin')
-
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+// 代码打包检查工具
+const TestBuildPlugin = require('test-build-plugin')
 
 // 基础 webpack 配置
 const baseConfig = require('./webpack.config')
 
-module.exports = WebPackMerge(baseConfig, {
+const prodWebpackConfig = WebPackMerge(baseConfig, {
   module: {
     rules: [
       {
@@ -45,6 +47,7 @@ module.exports = WebPackMerge(baseConfig, {
     ]
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: '[name].[hash].css', // prod 加上 hash
       chunkFilename: '[id].[hash].css' // prod 加上 hash
@@ -89,3 +92,8 @@ module.exports = WebPackMerge(baseConfig, {
     }
   }
 })
+// 引入代码构建检查插件
+if (process.argv && process.argv.indexOf('--testBuild') > -1) {
+  prodWebpackConfig.plugins.push(new TestBuildPlugin())
+}
+module.exports = prodWebpackConfig
